@@ -1,0 +1,41 @@
+/*
+about:profiles
+Profile: dev-edition-default
+Root Directory: 
+~/Library/Application Support/Firefox/Profiles/{RANDOM}.dev-edition-default/chrome/userChrome.css
+
+By default, userChrome.css modifications are disabled in Firefox. 
+You need to make sure that on the about:config page in Firefox, 
+the toolkit.legacyUserProfileCustomizations.stylesheets preference 
+is set to true and then restart the browser. 
+*/
+
+:root {
+	--tab-min-height: 32px !important;
+	--tab-max-height: 32px !important;
+}
+
+#tab-background {
+	max-height: 32px !important;
+}
+
+.tab-text.tab-label{
+	font-size: 13px;
+	padding-bottom: 2px;
+	padding-left: 3px;
+}
+
+@-moz-document url(chrome://browser/content/places/places.xhtml){
+	#placesView{
+		font-size: 1.2em;
+	}
+}
+
+/* Bookmarks Toolbar */
+#PersonalToolbar, 
+#PersonalToolbar menuitem,
+#PersonalToolbar menu {
+	font-size: 13px !important;
+
+}
+
